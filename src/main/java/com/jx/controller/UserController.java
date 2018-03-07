@@ -108,7 +108,7 @@ public class UserController {
         return statusVo;
     }*/
 
-    @RequestMapping("update/{id}")
+   /* @RequestMapping("update/{id}")
     @ResponseBody
     public ControllerStatusVo update(User user) {
         ControllerStatusVo statusVo = null;
@@ -120,5 +120,19 @@ public class UserController {
         }
         statusVo = ControllerStatusVo.statusVo(ControllerEnums.USER_UPDATE_SUCCESS);
         return  statusVo;
-    }
+    }*/
+   @RequestMapping("update")
+   @ResponseBody
+   public ControllerStatusVo update(HttpSession session,User user) {
+       User user1 = (User) session.getAttribute(Constants.USER_IN_SESSION);
+       user.setId(user1.getId());
+       ControllerStatusVo statusVo = null;
+       if (user1 != null) {
+           userService.update(user);
+           statusVo = ControllerStatusVo.statusVo(ControllerEnums.USER_UPDATE_SUCCESS);
+       } else {
+           statusVo = ControllerStatusVo.statusVo(ControllerEnums.USER_UPDATE_FAIL);
+       }
+       return statusVo;
+   }
 }

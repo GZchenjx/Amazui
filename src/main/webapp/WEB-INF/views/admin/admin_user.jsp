@@ -204,7 +204,7 @@
 
                         <div class="am-form-group">
                             <div class="am-u-sm-9 am-u-sm-push-3">
-                                <button type="button" class="am-btn am-btn-primary" onclick="update();">保存修改</button>
+                                <button type="button" class="am-btn am-btn-primary" ng-click="submit($event)"<%--onclick="update();"--%>>保存修改</button>
                             </div>
                         </div>
                     </form>
@@ -235,7 +235,7 @@
 <script src="/static/js/user/vue.min.js"></script>
 <script src="/static/js/user/qs.js"></script>
 <script src="/static/js/user/axios.min.js"></script>
-
+<script src="/static/js/jquery-from.js"></script>
 <script type="text/javascript">
     (function ($) {
         var app = angular.module("myApp", []);
@@ -267,6 +267,16 @@
             });
 
 
+            $scope.submit = function ($event) {
+                $('#adminForm').ajaxSubmit({
+                    url:'<%=path %>/user/update',
+                    type:'post',
+                    data:$("#updateFrom").serialize(),
+                    success:function (data) {
+                        $scope.user = data;
+                    }
+                });
+            };
 
         });
     }(jQuery));
@@ -280,15 +290,18 @@
                 }
             }, 'json');
     }*/
-    function update() {
-        $.post('<%=path %>/user/update/${sessionScope.user.id}',
+   /* function update() {
+        $.post('/user/update}',
             $("#adminForm").serialize(),
             function (data) {
                 if (data.result === "success") {
                     alert(data.message);
                 }
             }, 'json');
-    }
+    }*/
+
+
+
 </script>
 </body>
 </html>
