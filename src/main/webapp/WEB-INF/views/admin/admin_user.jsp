@@ -274,6 +274,7 @@
                     data:$("#updateFrom").serialize(),
                     success:function (data) {
                         $scope.user = data;
+                        alert(data.message);
                     }
                 });
             };
