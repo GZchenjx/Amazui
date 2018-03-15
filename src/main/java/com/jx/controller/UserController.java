@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Created by Administrator on 2018/1/31.
@@ -79,6 +80,10 @@ public class UserController {
         return "admin/admin_form";
     }
 
+    @RequestMapping("admin_information")
+    public String information() {
+        return "admin/admin_information";
+    }
 
     @RequestMapping("test")
     public String test() {
@@ -92,7 +97,12 @@ public class UserController {
         User user = (User) userService.getById(id);
         return user;
     }
-
+    @RequestMapping("listAll")
+    @ResponseBody
+    public List<Object> listAll() {
+        List<Object> objects = userService.listAll();
+        return objects;
+    }
   /*  @RequestMapping("update")
     @ResponseBody
     public ControllerStatusVo update(HttpSession session,User user) {
@@ -121,6 +131,11 @@ public class UserController {
         statusVo = ControllerStatusVo.statusVo(ControllerEnums.USER_UPDATE_SUCCESS);
         return  statusVo;
     }*/
+
+   @RequestMapping("excel")
+   public String excel() {
+       return "admin/excel";
+   }
    @RequestMapping("update")
    @ResponseBody
    public ControllerStatusVo update(HttpSession session,User user) {
@@ -135,4 +150,8 @@ public class UserController {
        }
        return statusVo;
    }
+
+
+
+
 }

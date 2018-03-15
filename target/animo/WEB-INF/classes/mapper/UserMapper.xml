@@ -20,4 +20,10 @@
       UPDATE t_user SET email = #{email},qq = #{qq},name = #{name},phone = #{phone},twitter = #{twitter},intro = #{intro} where id = #{id}
       ]]>
    </update>
+   <select id="listAll" resultType="User">
+      <![CDATA[
+        SELECT * from t_user 
+      ]]>
+      
+   </select>
 </mapper>

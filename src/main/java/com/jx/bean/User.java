@@ -13,6 +13,20 @@ public class User {
     private String twitter;
     private String intro;
 
+    public User() {
+    }
+
+    public User(Integer id, String email, String pwd, String name, String phone, String qq, String twitter, String intro) {
+        this.id = id;
+        this.email = email;
+        this.pwd = pwd;
+        this.name = name;
+        this.phone = phone;
+        this.qq = qq;
+        this.twitter = twitter;
+        this.intro = intro;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -75,5 +89,19 @@ public class User {
 
     public void setIntro(String intro) {
         this.intro = intro;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", pwd='" + pwd + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", qq='" + qq + '\'' +
+                ", twitter='" + twitter + '\'' +
+                ", intro='" + intro + '\'' +
+                '}';
     }
 }
