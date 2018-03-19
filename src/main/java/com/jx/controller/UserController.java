@@ -149,9 +149,14 @@ public class UserController {
            statusVo = ControllerStatusVo.statusVo(ControllerEnums.USER_UPDATE_FAIL);
        }
        return statusVo;
+
+
    }
 
 
-
+    @RequestMapping("updateImage")
+    public String updateImage() {
+       return "admin/updateImage";
+    }
 
 }

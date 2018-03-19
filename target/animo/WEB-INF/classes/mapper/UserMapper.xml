@@ -26,4 +26,9 @@
       ]]>
       
    </select>
+   <update id="updateImage" parameterType="user">
+      <![CDATA[
+        UPDATE t_user SET head_image = #{headImage} where id = #{id}
+      ]]>
+   </update>
 </mapper>

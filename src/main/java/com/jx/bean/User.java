@@ -12,11 +12,12 @@ public class User {
     private String qq;
     private String twitter;
     private String intro;
+    private String headImage;
 
     public User() {
     }
 
-    public User(Integer id, String email, String pwd, String name, String phone, String qq, String twitter, String intro) {
+    public User(Integer id, String email, String pwd, String name, String phone, String qq, String twitter, String intro,String headImage) {
         this.id = id;
         this.email = email;
         this.pwd = pwd;
@@ -25,6 +26,7 @@ public class User {
         this.qq = qq;
         this.twitter = twitter;
         this.intro = intro;
+        this.headImage = headImage;
     }
 
     public Integer getId() {
@@ -91,6 +93,14 @@ public class User {
         this.intro = intro;
     }
 
+    public String getHeadImage() {
+        return headImage;
+    }
+
+    public void setHeadImage(String headImage) {
+        this.headImage = headImage;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -102,6 +112,7 @@ public class User {
                 ", qq='" + qq + '\'' +
                 ", twitter='" + twitter + '\'' +
                 ", intro='" + intro + '\'' +
+                ", headImage='" + headImage + '\'' +
                 '}';
     }
 }

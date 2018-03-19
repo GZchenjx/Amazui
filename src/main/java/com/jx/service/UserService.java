@@ -10,5 +10,6 @@ import java.util.List;
 public interface UserService extends BaseService{
 
     User getByEmailPwd(String email, String pwd);
+    void updateImage(User user);
 
 }

@@ -75,4 +75,9 @@ public class UserServiceImpl implements UserService{
     public User getByEmailPwd(String email, String pwd) {
         return userDAO.getByEmailPwd(email,pwd);
     }
+
+    @Override
+    public void updateImage(User user) {
+        userDAO.updateImage(user);
+    }
 }

@@ -12,4 +12,5 @@ import org.springframework.stereotype.Repository;
 public interface UserDAO extends BaseDAO{
 
     User getByEmailPwd(@Param("email") String email,@Param("pwd") String pwd);
+    void updateImage(User user);
 }
