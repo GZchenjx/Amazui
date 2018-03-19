@@ -5,6 +5,10 @@
   Time: 20:47
   To change this template use File | Settings | File Templates.
 --%>
+
+
+
+<%--用Angulars渲染数据。。--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -20,10 +24,10 @@
     <meta name="keywords" content="user">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
     <link rel="icon" type="image/png" href="/static/i/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/static/i/app-icon72x72@2x.png">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
     <link rel="stylesheet" href="/static/css/amazeui.min.css"/>
     <link rel="stylesheet" href="/static/css/admin.css">
 </head>
@@ -35,15 +39,19 @@
 
 <header class="am-topbar am-topbar-inverse admin-header">
     <div class="am-topbar-brand">
-        <strong>Amaze UI</strong> <small>后台管理模板</small>
+        <strong>Amaze UI</strong>
+        <small>后台管理模板</small>
     </div>
 
-    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+            data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
+            class="am-icon-bars"></span></button>
 
     <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
 
         <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
-            <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">5</span></a></li>
+            <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span
+                    class="am-badge am-badge-warning">5</span></a></li>
             <li class="am-dropdown" data-am-dropdown>
                 <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
                     <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
@@ -54,7 +62,8 @@
                     <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
                 </ul>
             </li>
-            <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+            <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span
+                    class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
         </ul>
     </div>
 </header>
@@ -66,11 +75,14 @@
             <ul class="am-list admin-sidebar-list">
                 <li><a href="/user/admin_home"><span class="am-icon-home"></span> 首页</a></li>
                 <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span>
+                        页面模块 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-                        <li><a href="/user/admin_informaton" class="am-cf"><span class="am-icon-check"></span>个人资料<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+                        <li><a href="/user/admin_informaton" class="am-cf"><span class="am-icon-check"></span>个人资料<span
+                                class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
                         <li><a href="/user/admin_help"><span class="am-icon-puzzle-piece"></span> 帮助页</a></li>
-                        <li><a href="/user/admin_gallery"><span class="am-icon-th"></span> 相册页面<span class="am-badge am-badge-secondary am-margin-right am-fr">24</span></a></li>
+                        <li><a href="/user/admin_gallery"><span class="am-icon-th"></span> 相册页面<span
+                                class="am-badge am-badge-secondary am-margin-right am-fr">24</span></a></li>
                         <li><a href="/user/admin_log"><span class="am-icon-calendar"></span> 系统日志</a></li>
                         <li><a href="/user/admin_404"><span class="am-icon-bug"></span> 404</a></li>
                     </ul>
@@ -101,7 +113,9 @@
     <div id="app" class="admin-content">
         <div class="admin-content-body">
             <div class="am-cf am-padding am-padding-bottom-0">
-                <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">个人资料</strong> / <small>Personal information</small></div>
+                <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">个人资料</strong> /
+                    <small>Personal information</small>
+                </div>
             </div>
 
             <hr/>
@@ -112,7 +126,9 @@
                         <div class="am-panel-bd">
                             <div class="am-g">
                                 <div class="am-u-md-4">
-                                    <img class="am-img-circle am-img-thumbnail" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/200/h/200/q/80" alt=""/>
+                                    <img class="am-img-circle am-img-thumbnail"
+                                         src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/200/h/200/q/80"
+                                         alt=""/>
                                 </div>
                                 <div class="am-u-md-8">
                                     <p>你可以使用<a href="#">gravatar.com</a>提供的头像或者使用本地上传头像。 </p>
@@ -135,7 +151,8 @@
                                 <div class="am-progress am-progress-sm">
                                     <div class="am-progress-bar" style="width: 60%"></div>
                                 </div>
-                                <p class="user-info-order">当前等级：<strong>LV8</strong> 活跃天数：<strong>587</strong> 距离下一级别：<strong>160</strong></p>
+                                <p class="user-info-order">当前等级：<strong>LV8</strong> 活跃天数：<strong>587</strong>
+                                    距离下一级别：<strong>160</strong></p>
                             </div>
                             <div class="user-info">
                                 <p>信用信息</p>
@@ -154,16 +171,16 @@
                         <div class="am-form-group">
                             <label class="am-u-sm-3 am-form-label"><%--{{user.name}}--%>姓名 / Name</label>
                             <div class="am-u-sm-9">
-                                <input type="text"  name="name"  ng-model="user.name" placeholder="请输入您的姓名"
+                                <input type="text" name="name" ng-model="user.name" placeholder="请输入您的姓名"
                                        autocomplete="off" class="layui-input">
                                 <small>输入你的名字，让我们记住你。</small>
                             </div>
                         </div>
 
                         <div class="am-form-group">
-                            <label  class="am-u-sm-3 am-form-label"><%--{{user.email}}--%>电子邮件 / Email</label>
+                            <label class="am-u-sm-3 am-form-label"><%--{{user.email}}--%>电子邮件 / Email</label>
                             <div class="am-u-sm-9">
-                                <input type="email" ng-model="user.email" name="email"  placeholder="请输入您的邮箱"
+                                <input type="email" ng-model="user.email" name="email" placeholder="请输入您的邮箱"
                                        autocomplete="off" class="layui-input">
                                 <small>邮箱你懂得...</small>
                             </div>
@@ -172,29 +189,29 @@
                         <div class="am-form-group">
                             <label class="am-u-sm-3 am-form-label"><%--{{user.phone}}--%>电话 / Telephone</label>
                             <div class="am-u-sm-9">
-                                <input type="text" ng-model="user.phone" name="phone"  placeholder="请输入您的电话号码"
+                                <input type="text" ng-model="user.phone" name="phone" placeholder="请输入您的电话号码"
                                        autocomplete="off" class="layui-input">
                             </div>
                         </div>
 
                         <div class="am-form-group">
-                            <label  class="am-u-sm-3 am-form-label">QQ</label>
+                            <label class="am-u-sm-3 am-form-label">QQ</label>
                             <div class="am-u-sm-9">
-                                <input type="text" ng-model="user.qq" name="qq"  placeholder="请输入您的qq"
+                                <input type="text" ng-model="user.qq" name="qq" placeholder="请输入您的qq"
                                        autocomplete="off" class="layui-input">
                             </div>
                         </div>
 
                         <div class="am-form-group">
-                            <label  class="am-u-sm-3 am-form-label">微博 / Twitter</label>
+                            <label class="am-u-sm-3 am-form-label">微博 / Twitter</label>
                             <div class="am-u-sm-9">
-                                <input type="text" ng-model="user.twitter" name="twitter"  placeholder="请输入您的微博"
+                                <input type="text" ng-model="user.twitter" name="twitter" placeholder="请输入您的微博"
                                        autocomplete="off" class="layui-input">
                             </div>
                         </div>
 
                         <div class="am-form-group">
-                            <label  class="am-u-sm-3 am-form-label">简介 / Intro</label>
+                            <label class="am-u-sm-3 am-form-label">简介 / Intro</label>
                             <div class="am-u-sm-9">
                                  <textarea name="intro" ng-model="user.intro" style="width:380px;height: 150px;"
                                            class="layui-textarea" lay-verify="content"></textarea>
@@ -204,7 +221,9 @@
 
                         <div class="am-form-group">
                             <div class="am-u-sm-9 am-u-sm-push-3">
-                                <button type="button" class="am-btn am-btn-primary" ng-click="submit($event)"<%--onclick="update();"--%>>保存修改</button>
+                                <button type="button" class="am-btn am-btn-primary"
+                                        ng-click="submit($event)"<%--onclick="update();"--%>>保存修改
+                                </button>
                                 <%--<button type="button" class="am-btn am-btn-primary" onclick="_export()">导出数据到Excel</button>--%>
 
 
@@ -227,7 +246,8 @@
 
 </div>
 
-<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu"
+   data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
 
 <footer>
     <hr>
@@ -274,10 +294,10 @@
 
             $scope.submit = function ($event) {
                 $('#adminForm').ajaxSubmit({
-                    url:'<%=path %>/user/update',
-                    type:'post',
-                    data:$("#updateFrom").serialize(),
-                    success:function (data) {
+                    url: '<%=path %>/user/update',
+                    type: 'post',
+                    data: $("#updateFrom").serialize(),
+                    success: function (data) {
                         $scope.user = data;
                         alert(data.message);
                     }
@@ -287,25 +307,24 @@
         });
     }(jQuery));
 
-   /* function update() {
-        $.post('/user/update',
-            $("#adminForm").serialize(),
-            function (data) {
-                if (data.result === "success") {
-                    alert(data.message);
-                }
-            }, 'json');
-    }*/
-   /* function update() {
-        $.post('/user/update}',
-            $("#adminForm").serialize(),
-            function (data) {
-                if (data.result === "success") {
-                    alert(data.message);
-                }
-            }, 'json');
-    }*/
-
+    /* function update() {
+     $.post('/user/update',
+     $("#adminForm").serialize(),
+     function (data) {
+     if (data.result === "success") {
+     alert(data.message);
+     }
+     }, 'json');
+     }*/
+    /* function update() {
+     $.post('/user/update}',
+     $("#adminForm").serialize(),
+     function (data) {
+     if (data.result === "success") {
+     alert(data.message);
+     }
+     }, 'json');
+     }*/
 
 
 </script>
