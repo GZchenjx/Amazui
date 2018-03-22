@@ -74,14 +74,6 @@
 
 
     <div class="layui-form-item">
-        <div class="layui-input-block">
-            <button class="layui-btn" lay-submit="" lay-filter="">立即提交</button>
-            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-        </div>
-    </div>
-
-
-    <div class="layui-form-item">
         <div class="layui-upload">
             <label>头像：</label>
             <div class="layui-upload-list">
@@ -91,6 +83,17 @@
             <a href="javascript:void(0);" class="layui-btn" style="width: 200px;margin-top: 15px;" id="img">修改头像</a>
         </div>
     </div>
+
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+
+
+
 
 
 </form>
